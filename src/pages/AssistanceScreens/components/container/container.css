@@ -1,0 +1,67 @@
+.container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1c1e;
+  position: relative;
+}
+
+/* Tela de STATUS ajustada */
+.status-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Ajustado para o padrão da tela de STATUS */
+  background-color: #131315; /* Mesma cor do container principal */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: auto; /* Garante que o conteúdo role caso ultrapasse */
+  padding: 20px; /* Espaçamento interno */
+}
+
+/* Botão de fechar dentro da tela de STATUS */
+.close-status-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.close-status-button:hover {
+  color: #ff6961;
+}
+
+/* Centraliza o conteúdo principal quando o formulário está oculto */
+.central-placeholder img {
+  width: 260px;
+  height: 260px;
+}
+
+/* Estilos específicos para o formulário */
+.form-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #131315; /* Fundo exclusivo do formulário */
+  border-radius: 15px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #ff6961;
+}

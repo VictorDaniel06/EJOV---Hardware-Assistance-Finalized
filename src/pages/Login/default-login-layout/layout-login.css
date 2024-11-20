@@ -1,0 +1,46 @@
+.layout-container {
+  display: flex;
+  height: 100vh;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: #1A1A1E;
+  flex: 1;
+  height: 120Vh;
+  margin: 0;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #29292E;
+  flex: 1;
+  padding: 14%;
+
+}
+
+.image-placeholder img {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .form-section {
+    height: auto;
+    padding: 10px;
+  }
+
+  .image-section {
+    display: none;
+  }
+}

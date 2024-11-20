@@ -1,0 +1,89 @@
+.login-form {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.logo-ejov img {
+  display: block;
+  margin: 0 auto 20px;
+  width: 200px;
+  height: 200px;
+}
+
+.login-form label {
+  color: #fff;
+  font-size: 18px;
+}
+
+.login-form input {
+  padding: 10px;
+  padding-right: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eee;
+  margin-top: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.password-input-container input {
+  width: 100%;
+}
+
+.password-input-container button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #888;
+}
+
+.password-input-container button:hover {
+  color: #5751c9;
+}
+
+.login-button {
+  padding: 15px;
+  background-color: #8686FC;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.login-button:hover {
+  background-color: #5751c9;
+}
+
+.login-links {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.login-links a {
+  color: #4f60ff;
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+.p a{
+  color: #4f60ff;
+  text-decoration: none;
+}

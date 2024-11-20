@@ -1,0 +1,323 @@
+/* Container principal */
+.status-container {
+  padding: 10px;
+  background-color: #1c1c1e;
+  border-radius: 8px;
+  max-width: 1200px; /* Largura geral aumentada */
+  margin: 20px auto;
+  width: 98%; /* Para responsividade */
+}
+
+/* Título */
+.status-container h2 {
+  text-align: center;
+  color: #f5f5f5;
+  margin-bottom: 20px;
+  font-size: 24px; /* Título maior */
+}
+
+/* Estilização da tabela */
+.status-table {
+  width: 100%; /* Ocupa toda a largura do contêiner */
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 16px;
+}
+
+.status-table thead {
+  background-color: #1c1c1e;
+  color: white;
+}
+
+.status-table th,
+.status-table td {
+  padding: 15px; /* Maior espaçamento interno */
+  border: 1px solid #444; /* Borda discreta */
+  word-break: break-word; /* Quebra texto longo */
+}
+
+/* Alternância de cores nas linhas (tema escuro) */
+.status-table tbody tr:nth-child(even) {
+  background-color: #333; /* Cor mais escura */
+}
+
+.status-table tbody tr:nth-child(odd) {
+  background-color: #3c3c3c; /* Cor ligeiramente mais clara */
+}
+
+/* Classes de status com cores específicas */
+.status-pendente {
+  color: red;
+  font-weight: bold;
+}
+
+.status-em-andamento {
+  color: orange;
+  font-weight: bold;
+}
+
+.status-concluído {
+  color: green;
+  font-weight: bold;
+}
+
+/* Botões na tabela */
+.status-table button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-size: 14px; /* Botões um pouco maiores */
+  cursor: pointer;
+}
+
+.btn-visualizar {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.btn-visualizar:hover {
+  background-color: #0056b3;
+}
+
+/* Tela de confirmação */
+.confirm-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo mais escuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.confirm-popup-content {
+  background-color: #151515d2; /* Mesma cor do container principal */
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  color: #f5f5f5; /* Texto claro */
+}
+
+.confirm-popup h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #f5f5f5; /* Texto claro */
+}
+
+.confirm-popup p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #ccc; /* Texto ligeiramente mais claro */
+}
+
+.confirm-popup-actions {
+  display: flex;
+  justify-content: center; /* Alinha os botões ao centro */
+  gap: 15px; /* Espaçamento ajustado entre os botões */
+}
+
+/* Botões de confirmação */
+.btn-confirmar {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-confirmar:hover {
+  background-color: #218838;
+}
+
+.btn-cancelar {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-cancelar:hover {
+  background-color: #c82333;
+}
+
+/* Estilização do popup de visualização/edição */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo mais escuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  padding: 20px;
+  border-radius: 10px;
+  background: #151515d2; /* Mesma cor do container principal */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 600px; /* Largura ajustada */
+  max-width: 95%; /* Para se ajustar em telas menores */
+  max-height: 80%; /* Limita a altura */
+  overflow-y: auto; /* Adiciona rolagem caso o conteúdo exceda a altura */
+  font-family: Arial, sans-serif;
+  color: #f5f5f5; /* Texto claro */
+}
+
+.popup-content label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ccc; /* Texto ligeiramente mais claro */
+}
+
+.popup-content input,
+.popup-content textarea,
+.popup-content select {
+  width: calc(100% - 20px);
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #444; /* Borda escura */
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #222; /* Fundo escuro */
+  color: #f5f5f5; /* Texto claro */
+}
+
+.popup-content select {
+  height: 45px;
+  margin-bottom: 15px;
+}
+
+.popup-content textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botões no popup */
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.popup-actions button {
+  flex: 1;
+  margin: 0 10px;
+  padding: 12px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-editar {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-editar:hover {
+  background-color: #0056b3;
+}
+
+.btn-salvar {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-salvar:hover {
+  background-color: #218838;
+}
+
+.btn-fechar {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-fechar:hover {
+  background-color: #c82333;
+}
+
+.btn-excluir {
+  background-color: #c82333;
+  color: white;
+}
+
+.btn-excluir:hover {
+  background-color: #a71d2a;
+}
+
+/* Ajustando responsividade */
+@media (max-width: 768px) {
+  .popup-content {
+    width: 90%; /* Ajusta o tamanho do popup em telas menores */
+    max-height: 90%; /* Ajusta a altura em telas menores */
+  }
+
+  .popup-content input,
+  .popup-content textarea,
+  .popup-content select {
+    font-size: 14px; /* Reduz o tamanho da fonte */
+  }
+
+  .popup-actions button {
+    font-size: 12px; /* Reduz tamanho dos botões */
+    padding: 10px 15px;
+  }
+
+  .confirm-popup-content {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 5px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  background-color: #28a745;
+  font-weight: bold;
+}
